@@ -1,19 +1,106 @@
-<!--[if IE]>
-	这段文字只在IE浏览器显示
-<![endif]-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex</title>
+</head>
+<body>
+
+	<style type="text/css">
+		body {
+			width: 980px;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+		}
+		#container{
+			display: flex;
+			text-align: center;
+			flex-wrap: wrap;
+			margin-bottom: 10px;
+		}
+		#container .col {
+			background-color: aliceblue;
+			flex: 1;
+			border: 1px solid black;
+			padding: 20px;
+			margin: 10px;
+		}
+		#container .col2 {
+			flex: 3;
+		}
+		/*Menu*/
+		#nav1 {
+			display: flex;
+			justify-content: space-between;
+			padding-left: 0;
+			text-align: center;
+		}
+		.menuItem {
+			list-style: none;
+			padding: 10px;
+			flex: 1;
+			border: 1px solid black;
+			background-color: bisque;
+		}
+		#footer ul {
+			list-style: none;
+		}
+		.section {
+			flex: 1;
+		}
+		#footer {
+			flex: .1;
+			background-color: lightblue; 
+			margin-bottom: 15px;
+		}
+		#footer .address {
+			padding-top: 5px;
+		}
+		.section2 {
+			order: -1;
+			flex: .01;
+		}
+	</style>
+
+	<div id="container" class="section section1">
+		<div class="col col1">area1 
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae debitis ipsum ratione quas nihil incidunt fugit eum minima quibusdam eaque fugiat optio quasi, recusandae id, nam dolor voluptate at maiores.</p> 
+		</div>
+		<div class="col col2">area2
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae debitis ipsum ratione quas nihil incidunt fugit eum minima quibusdam eaque fugiat optio quasi, recusandae id, nam dolor voluptate at maiores.</p> 
+		</div>
+		<div class="col col3">area3
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae debitis ipsum ratione quas nihil incidunt fugit eum minima quibusdam eaque fugiat optio quasi, recusandae id, nam dolor voluptate at maiores.</p> 
+		</div>
+	</div>
+
+	<!-- menu - nav -->
+
+	<div id="navArea" class="section section2">
+		<ul id="nav1">
+			<li id="home" class="menuItem home">Home</li>
+			<li id="news" class="menuItem news">News</li>
+			<li id="sports" class="menuItem sports">Sports</li>
+			<li id="inv" class="menuItem inv">Investigations</li>
+			<li id="about" class="menuItem about">About Us</li>
+		</ul>
+	</div>
+
+	<!-- sticky footer  -->
+
+	<div id="footer" class="section section3">
+		<div class="address">
+			<ul>
+				<li class="info">sticky footer</li>
+			  <li class="info">blah blah</li>
+			  <li class="info">4567 south state blvd</li>
+			  <li class="info">chicago, il 60616</li>
+			<ul>
+		</div>
+	</div>
+
 	
-<!--[if IE 6]>
-	这段文字只在IE6浏览器显示
-<![endif]-->
-	
-<!--[if gte IE 6]>
-	这段文字只在IE6以上(包括)版本IE浏览器显示
-<![endif]-->
-	
-<!--[if ! IE 8]>
-	这段文字在非IE8浏览器显示
-<![endif]-->
-	
-<!--[if !IE]>
-	这段文字只在非IE浏览器显示
-<![endif]-->
+</body>
+</html>
